@@ -1,0 +1,93 @@
+{
+  "main": {
+    "id": "f4158fc2f540c8a8",
+    "type": "split",
+    "children": [
+      {
+        "id": "eac9e1ab941608d5",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Publishing to Itch.io.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a11b8732bafc87c3",
+    "type": "split",
+    "children": [
+      {
+        "id": "24df93b5c479880a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "32ce4f94cb61f14c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "f8dbe56b5443df2c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "37a675bda90b82c6",
+    "type": "split",
+    "children": [
+      {
+        "id": "d5c88b2f4c290bb2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ed95878a6e89b12d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Publishing to Itch.io.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "eac9e1ab941608d5",
+  "lastOpenFiles": [
+    "Publishing to Itch.io.md"
+  ]
+}
