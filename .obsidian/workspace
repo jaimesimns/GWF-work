@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "eac9e1ab941608d5",
+        "id": "48020dca2bd8680d",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Publishing to Itch.io.md",
+            "file": "Process Notes/11-24-2021.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Publishing to Itch.io.md",
+                "file": "Process Notes/11-24-2021.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,8 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "eac9e1ab941608d5",
+  "active": "48020dca2bd8680d",
   "lastOpenFiles": [
-    "Publishing to Itch.io.md"
+    "Process Notes/11-24-2021.md",
+    "artifact notes/To do - MRE whoops.md",
+    "To Do + Timeline.md",
+    "start-pause-stop buttons in Twine.md",
+    "stop-start sound on Twine.md",
+    "general notes.md",
+    "Media/Collection Map/Ingenium-Collection.png",
+    "Media/Twine/Publishing to Itch.io.md",
+    "artifact notes/tree elevator.md",
+    "artifact notes/Thresher.md"
   ]
 }
