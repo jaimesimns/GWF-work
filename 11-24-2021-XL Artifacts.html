@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="XL Artifacts" startnode="2" creator="Twine" creator-version="2.3.14" ifid="3795DB2A-9871-49A9-BDF3-BB8C8949B668" zoom="0.6" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">* { box-sizing: border-box;
+	<tw-storydata name="XL Artifacts" startnode="2" creator="Twine" creator-version="2.3.15" ifid="3795DB2A-9871-49A9-BDF3-BB8C8949B668" zoom="0.6" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">* { box-sizing: border-box;
 }
 
 body{
@@ -113,7 +113,7 @@ font-size: large;
 border-style: solid;  
 border-width: 0px;  
 border-color: white;  
-background: rgba(255, 255, 255, 0.7);
+background: rgba(255, 255, 255, 0.8);
 padding-top: 20px;
 padding-bottom: 20px;
 padding-left: 35px;
@@ -121,19 +121,26 @@ padding-right: 35px;
 border-radius: 10px;
 }
 
-h2 {color: black; text-align: center;}
 h1 {color: white; text-align: center;}
-
-h4 {color: black; text-align: center;}
-
-h5 {color: black; text-align: center; background-color: white; border: 2px solid grey; border-radius: 10px;
+h2 {color: black; text-align: center;}
+h3 {color: teal; text-align: center; background-color: teal; border: 2px solid teal; border-radius: 10px;
+margin-top: 15px;
+margin-bottom: 15px;
+margin-right: 100px;
+margin-left: 100px;}
+h4 {color: black; text-align: center; background-color: white; border: 2px solid grey; border-radius: 10px;
 margin-top: 15px;
 margin-bottom: 15px;
 margin-right: 300px;
 margin-left: 300px;
 }
-
-h6 {color: white; text-align: left;}
+h5 {color: black; text-align: center; background-color: white; border: 2px solid white; border-radius: 10px;
+margin-top: 15px;
+margin-bottom: 15px;
+margin-right: 100px;
+margin-left: 100px;
+}
+h6 {color: white; text-align: left; size: large;}
 
 .passage a {color: blue;}
 
@@ -142,13 +149,15 @@ h6 {color: white; text-align: left;}
 img { 
 max-width: 100%;
 height: auto;
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
 
 video {
   width: 100%;
   height: auto;
 }
-
 
 #ui-bar {
 background: rgba(0, 0, 0, 0.5);
@@ -218,64 +227,51 @@ color: black;
 
 
 
-</script><tw-passagedata pid="1" name="Start" tags="" position="903,126" size="100,100">&lt;&lt;audio &quot;audio1&quot; play&gt;&gt;
-In 1823, Thomas Mears and Philemenon Wright launched the first steamboat on the Ottawa River proper. Named the &quot;Union,&quot; its launch marked the beginning of more than one hundred years of steam vessel use on the river. Over the course of the century, hundreds of steam vessels plied the Ottawa River. Some were retired or sold for use on other waters, but many sank and remain under the river&#39;s surface.
+</script><tw-passagedata pid="1" name="Start" tags="" position="403,269" size="100,100">&lt;&lt;audio &quot;audio1&quot; play&gt;&gt;
 
-This tour scales down the Ottawa River to map the river (and its shipwrecks) along the Ottawa River Pathway/Trans-Canada Trail between the Chaudiére Crossing and the Champlain Bridge.
-
-Let this game &#39;transport&#39; you to various points along the 1,271 kilometres of the Ottawa River, where you&#39;ll be presented with information about shipwrecks in that area. You are welcome to read all of the information available, or to move on once you&#39;re ready.
+Add intro to collection; center; etc. as well as usage instructions and accessibility. Do voiceover/podcast style in addition to text??
 
 Some of these passages involve audio components. Use the volume buttons on your device to control the volume, or to mute it if it&#39;s overwhelming. 
 
-Currently you are at $Location.latitude and $Location.longitude. To begin the tour, move to the path at the back of the War Museum.
+Currently you are at $Location.latitude and $Location.longitude. To begin the tour, move inside the entrance to the XL Artifact collection room.
 
 Ready?
 
-!!!!![[Yes!]]
-
-!!!!![[No.]]
-
+!!!![[Yes!]]
+!!!![[No.]]
 
 
 
 
-</tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="" position="905,1" size="100,100">!!XL Artifacts Room
-!!!!An audio-based collection room tour, available both on and off-location.
+
+</tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="" position="398,107" size="100,100">!!!
+!!XL Artifacts Room
+!!!
+An audio-based collection room tour, available both on and off-location.
 &lt;img src=&quot;images/Ingenium-logo.jpg&quot; alt=&quot;Ingenium logo, of the word Ingenium with three coloured circles above. They are red, green, and blue.&quot;&gt;
-!!!!![[Start]] 
+!!!![[Start]] 
 
+[[Audio Test - Embed]]
 
-
-/%this sets up our variables for our geotriggers; use locations from google maps; a=,b=,c=,d=,f=,g=,h=;%/
-
+/% stopa - trolleycar; stopb - railcar; stopc - powershovel; stopd - telescope; stope - generator; stopf - thresher; stopg - pointer boat; stoph - tree elevator %/
 &lt;&lt;set $buffer = 0.0005&gt;&gt;
-
-&lt;&lt;set $stopalat = 45.39272016990684&gt;&gt; 
-&lt;&lt;set $stopalong = -75.68696975473881&gt;&gt;
-
-&lt;&lt;set $stopblat = 45.38895603171067&gt;&gt; 
-&lt;&lt;set $stopblong = -75.68342843054397&gt;&gt;
-
-&lt;&lt;set $stopclat = 45.389306861616895&gt;&gt; 
-&lt;&lt;set $stopclong = -75.68140627853239&gt;&gt;
-
-&lt;&lt;set $stopdlat = 45.38899565545231&gt;&gt; 
-&lt;&lt;set $stopdlong = -75.67956527920862&gt;&gt;
-
-&lt;&lt;set $stopelat = 45.38899565545231&gt;&gt; 
-&lt;&lt;set $stopelong = -75.67956527920862&gt;&gt;
-
-&lt;&lt;set $stopflat = 45.38899565545231&gt;&gt; 
-&lt;&lt;set $stopflong = -75.67956527920862&gt;&gt;
-
-&lt;&lt;set $stopglat = 45.38899565545231&gt;&gt; 
-&lt;&lt;set $stopglong = -75.67956527920862&gt;&gt;
-
-&lt;&lt;set $stophlat = 45.38899565545231&gt;&gt; 
-&lt;&lt;set $stophlong = -75.67956527920862&gt;&gt;
-
-&lt;&lt;cacheaudio &quot;audio1&quot; &quot;audio1.mp3&quot;&gt;&gt;
-</tw-passagedata><tw-passagedata pid="3" name="old-code calibrate the scan" tags="" position="1101,2" size="100,100">...calibrating...
+&lt;&lt;set $stopalat = 45.403920&gt;&gt; 
+&lt;&lt;set $stopalong = -75.621111&gt;&gt;
+&lt;&lt;set $stopblat = 45.403884&gt;&gt; 
+&lt;&lt;set $stopblong = -75.621192&gt;&gt;
+&lt;&lt;set $stopclat = 45.403892&gt;&gt; 
+&lt;&lt;set $stopclong = -75.621217&gt;&gt;
+&lt;&lt;set $stopdlat = 45.403938&gt;&gt; 
+&lt;&lt;set $stopdlong = -75.621289&gt;&gt;
+&lt;&lt;set $stopelat = 45.403915&gt;&gt; 
+&lt;&lt;set $stopelong = -75.621160&gt;&gt;
+&lt;&lt;set $stopflat = 45.403933&gt;&gt; 
+&lt;&lt;set $stopflong = -75.621101&gt;&gt;
+&lt;&lt;set $stopglat = 45.403927&gt;&gt; 
+&lt;&lt;set $stopglong = -75.621061&gt;&gt;
+&lt;&lt;set $stophlat = 45.403905&gt;&gt; 
+&lt;&lt;set $stophlong = -75.621073&gt;&gt;
+&lt;&lt;cacheaudio &quot;audio1&quot; &quot;audio1.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="old-code calibrate the scan" tags="" position="100,103" size="100,100">...calibrating...
 
  /%This is the nuts-and-bolts of a geotrigger. We come back to this passage again and again to obtain the latest location. Then, in a series of nested if-else statements we go through our list of potential locations. A more elegant version of this code is in the orphaned passage &#39;buffer-test&#39;. For a more elegant version see the &#39;calibrate the scan&#39; passage%/
  
@@ -290,7 +286,7 @@ Ready?
 
 &lt;&lt;else&gt;&gt;
 	&lt;&lt;display &quot;This zone is clear&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="stopb" tags="" position="305,1037" size="100,100">Currently you are at $Location.latitude and $Location.longitude
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="stopb" tags="" position="891,1189" size="100,100">Currently you are at $Location.latitude and $Location.longitude
 
 Or, Calumet, Que. In front of you are two shipwrecks. To your right (heading back west), there are four shipwrecks. To your left are another four. Where to do you want to go first?
 
@@ -301,7 +297,7 @@ Or, Calumet, Que. In front of you are two shipwrecks. To your right (heading bac
 
 [[Left|Community2]]
 
-[[Let&#39;s move on.|Let&#39;s keep going.]]</tw-passagedata><tw-passagedata pid="5" name="stopc" tags="" position="801,537" size="100,100">
+[[Let&#39;s move on.|Let&#39;s keep going.]]</tw-passagedata><tw-passagedata pid="5" name="stopc" tags="" position="1489,1181" size="100,100">
 
 
 We&#39;re almost back in Ottawa. Currently, you&#39;re standing near the ---------.
@@ -314,12 +310,10 @@ Where should we go next?
 [[Conservator3]]
 [[Community3]]
 [[Or, let&#39;s move on.]]
-</tw-passagedata><tw-passagedata pid="6" name="stopa" tags="" position="301,300" size="100,100">&lt;&lt;ADD AUDIO&gt;&gt;
-Your map probably tells you that you are at $Location.latitude and $Location.longitude. Your eyes may tell you that you&#39;re along the Ottawa River path, or the Trans-Canada path, or wherever you&#39;ve placed yourself. Wherever that is though, is wrong. 
+</tw-passagedata><tw-passagedata pid="6" name="stopa" tags="" position="293,1190" size="100,100">&lt;&lt;ADD AUDIO&gt;&gt;
+Your map probably tells you that you are at $Location.latitude and $Location.longitude. 
 
-You&#39;ve actually been transported 154 kilometres east - to the mouth of the Ottawa River, or Lake of Two Mountains. That&#39;s where the soundscape you&#39;re listening now is from.
-
-In front of you, in the Lake of Two Mountains, are two shipwrecks. To your right, in the Baie de Vaudreuil, are three shipwrecks. To your left, in the Ottawa River proper (from Hudson, Que. to Isle de Carillon), are four shipwrecks. 
+words
 
 &lt;img src=&quot;images/padlet-hudson.png&quot; alt=&quot;Padlet app window showing Hudson, Que., with nine pinpricks denoting shipwrecks.&quot;&gt;
 
@@ -328,35 +322,41 @@ Which do you want to go to first?
 [[Conservator1]]
 [[Curator1]]
 [[Community1]]
-[[Let&#39;s move on.|Let&#39;s move on.]]
+[[Let&#39;s move on.]]
 
 
-</tw-passagedata><tw-passagedata pid="7" name="Yes!" tags="" position="832,265" size="100,100">!!Let&#39;s begin!
+</tw-passagedata><tw-passagedata pid="7" name="Yes!" tags="" position="500,406" size="100,100">The XL Artifact collection room contains many of the extra-large artifacts - those that don&#39;t quite fit in the smaller or more compact collections rooms. Most of the collection is arranged by subject matter (such as transportation, agriculture, etc.) or by artifact type (bicycles, cameras, cars, etc.). However, in this room there&#39;s a mix of all sorts of artifacts.
 
-&lt;&lt;if approxEqual($Location.latitude, $stopalat) and approxEqual($Location.longitude, $stopalong)&gt;&gt;
-	&lt;&lt;display &quot;stopa&quot;&gt;&gt;
-	&lt;&lt;else&gt;&gt;
-	&lt;&lt;display &quot;error1&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;
+Which artifact do you want to see first?
 
-/% Currently you are at $Location.latitude and $Location.longitude %/
-</tw-passagedata><tw-passagedata pid="8" name="No." tags="" position="972,263" size="100,100">&lt;&lt;audio &quot;audio1&quot; stop&gt;&gt;
+[[Trolley car]]
+[[Train car]]
+[[Powershovel]]
+[[Telescope]]
+[[Generator]]
+[[Thresher]]
+[[Pointer boat]]
+[[Tree elevator]]
+
+Or, if you&#39;ve seen everything that you wanted to, click the &#39;All done&#39; button.
+
+[[All done|Credit]]</tw-passagedata><tw-passagedata pid="8" name="No." tags="" position="645,261" size="100,100">&lt;&lt;audio &quot;audio1&quot; stop&gt;&gt;
 
 That&#39;s alright! Click the &#39;yes&#39; link whenever you&#39;re ready.
 
 
-!!!!![[Yes!]] </tw-passagedata><tw-passagedata pid="9" name="Conservator1" tags="" position="103,405" size="100,100">
+!!!![[Yes!]] </tw-passagedata><tw-passagedata pid="9" name="Conservator1" tags="" position="95,1385" size="100,100">
 
 Where to now?
 
 [[Curator1]] 
 [[Community1]] 
-[[Let&#39;s move on.]] </tw-passagedata><tw-passagedata pid="10" name="Curator1" tags="" position="302,440" size="100,100">
+[[Let&#39;s move on.]] </tw-passagedata><tw-passagedata pid="10" name="Curator1" tags="" position="300,1374" size="100,100">
 Where to next?
 
 [[Conservator1]] 
 [[Community1]] 
-[[Let&#39;s move on.]] </tw-passagedata><tw-passagedata pid="11" name="Community1" tags="" position="500,401" size="100,100">To your left are four shipwrecks - the Duchess of York, the Marie Josephine, the Ste. Anne, and the Maude.
+[[Let&#39;s move on.]] </tw-passagedata><tw-passagedata pid="11" name="Community1" tags="" position="492,1381" size="100,100">To your left are four shipwrecks - the Duchess of York, the Marie Josephine, the Ste. Anne, and the Maude.
 
 
 
@@ -364,23 +364,11 @@ Where to?
 
 [[Conservator1]] 
 [[Curator1]] 
-[[Let&#39;s move on.]] </tw-passagedata><tw-passagedata pid="12" name="Let&#39;s move on." tags="" position="301,599" size="100,100">Let&#39;s head west!
+[[Let&#39;s move on.]] </tw-passagedata><tw-passagedata pid="12" name="Let&#39;s move on." tags="" position="301,1567" size="100,100">Let&#39;s head to another stop. Click the link below to return to the artifact selection screen.
 
-Walk to (next stop) and click &#39;Ready&#39; when you&#39;re there.
+[[Let&#39;s choose another artifact.|Yes!]]
 
-[[Ready!]]
-
-</tw-passagedata><tw-passagedata pid="13" name="Ready!" tags="" position="300,728" size="100,100">Currently you are at $Location.latitude and $Location.longitude.
-
-In a second, you&#39;ll arrive at your destination. 65.9 kilometres west of the Lake of Two Mountains is Calumet, Que.
-
-
-&lt;&lt;if approxEqual($Location.latitude, $stopblat) and approxEqual($Location.longitude, $stopblong)&gt;&gt;
-	&lt;&lt;display &quot;stopb&quot;&gt;&gt;
-	&lt;&lt;else&gt;&gt;
-	&lt;&lt;display &quot;error2&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="14" name="Curator2" tags="" position="100,1202" size="100,100">
+</tw-passagedata><tw-passagedata pid="13" name="Curator2" tags="" position="692,1370" size="100,100">
 
 
 
@@ -389,7 +377,7 @@ In a second, you&#39;ll arrive at your destination. 65.9 kilometres west of the 
 
 [[Right|Conservator2]] 
 [[Left|Community2]] 
-[[Let&#39;s keep going.]] </tw-passagedata><tw-passagedata pid="15" name="Conservator2" tags="" position="302,1205" size="100,100">
+[[Let&#39;s keep going.]] </tw-passagedata><tw-passagedata pid="14" name="Conservator2" tags="" position="894,1373" size="100,100">
 
 
 
@@ -399,57 +387,31 @@ In a second, you&#39;ll arrive at your destination. 65.9 kilometres west of the 
 
 [[In front|Curator2]] 
 [[Left|Community2]] 
-[[Let&#39;s keep going.]] </tw-passagedata><tw-passagedata pid="16" name="Community2" tags="" position="503,1202" size="100,100">
+[[Let&#39;s keep going.]] </tw-passagedata><tw-passagedata pid="15" name="Community2" tags="" position="1083,1378" size="100,100">
 
 
 
 
 [[Right|Conservator2]] 
 [[In front|Curator2]] 
-[[Let&#39;s keep going.]] </tw-passagedata><tw-passagedata pid="17" name="Let&#39;s keep going." tags="" position="303,1368" size="100,100">Let&#39;s head west!
+[[Let&#39;s keep going.]] </tw-passagedata><tw-passagedata pid="16" name="Let&#39;s keep going." tags="" position="890,1589" size="100,100">Let&#39;s head to another stop. Click the link below to return to the artifact selection screen.
 
-Walk to (next stop) and click &#39;Ready&#39; when you&#39;re there.
+[[Let&#39;s choose another artifact.|Yes!]]
 
-[[Ready?|Ready2]]
+</tw-passagedata><tw-passagedata pid="17" name="error1" tags="" position="300,988" size="100,100">You&#39;re not in the right location. Proceed anyways?
 
-</tw-passagedata><tw-passagedata pid="18" name="Ready2" tags="" position="302,1505" size="100,100">/%this bit of code does the same thing as the &#39;old-code calibrate the scan&#39; passage, but instead calls on the &#39;approxEqual&#39; function that we made in this story&#39;s javascript. The &#39;display&#39; command will display other passages when you put the desired passage&#39;s title within the quotation marks. Note we also make a passage for when the player is in a location we haven&#39;t coded for. That particular passage could contain hints etc%/
+[[Yes|stopa]]</tw-passagedata><tw-passagedata pid="18" name="error2" tags="" position="892,986" size="100,100">You&#39;re not in the right location. Move on anyways?
 
-Currently you are at $Location.latitude and $Location.longitude
+[[Yes|stopb]]</tw-passagedata><tw-passagedata pid="19" name="error3" tags="" position="1481,999" size="100,100">You&#39;re not quite there! Try moving closer to the path.
 
-In a second, you&#39;ll arrive at your destination. 65.9 kilometres west of the Lake of Two Mountains is Calumet, Que.
+!!!!![[Try again|stopc]]</tw-passagedata><tw-passagedata pid="20" name="StoryCaption" tags="" position="102,253" size="100,100">!!!!!!This is an audio-based geolocated Twine adventure, created by Jaime Simons for Ingenium as part of the 2021-2022 Garth Wilson Fellowship. Major thanks to Dr. Graham for his geolocation template.
+!!!!!!To use, turn on your device&#39;s location setting. You may also need to enable your web browser&#39;s location setting. If you prefer not to, or if you prefer to engage statically, that&#39;s fine too - the adventure will still work!</tw-passagedata><tw-passagedata pid="21" name="Or, let&#39;s move on." tags="" position="1488,1587" size="100,100">Let&#39;s head to another stop. Click the link below to return to the artifact selection screen.
 
+[[Let&#39;s choose another artifact.|Yes!]]
 
-&lt;&lt;if approxEqual($Location.latitude, $stopclat) and approxEqual($Location.longitude, $stopclong)&gt;&gt;
-	&lt;&lt;display &quot;stopc&quot;&gt;&gt;
-	&lt;&lt;else&gt;&gt;
-	&lt;&lt;display &quot;error3&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="19" name="error1" tags="" position="300,162" size="100,100">You&#39;re not in the right location. Proceed anyways?
+</tw-passagedata><tw-passagedata pid="22" name="error4" tags="" position="2072,1001" size="100,100">You&#39;re not in the right location. Move on anyways?
 
-[[Yes|stopa]]</tw-passagedata><tw-passagedata pid="20" name="error2" tags="" position="305,902" size="100,100">You&#39;re not in the right location. Move on anyways?
-
-[[Yes|stopb]]</tw-passagedata><tw-passagedata pid="21" name="error3" tags="" position="801,403" size="100,100">You&#39;re not quite there! Try moving closer to the path.
-
-!!!!![[Try again|stopc]]</tw-passagedata><tw-passagedata pid="22" name="StoryCaption" tags="" position="599,68" size="100,100">!!!!!!This is an audio-based geolocated Twine adventure, created by Jaime Simons for Ingenium as part of the 2021-2022 Garth Wilson Fellowship. Major thanks to Dr. Graham for his geolocation template.
-!!!!!!To use, turn on your device&#39;s location setting. You may also need to enable your web browser&#39;s location setting. If you prefer not to, or if you prefer to engage statically, that&#39;s fine too - the adventure will still work!</tw-passagedata><tw-passagedata pid="23" name="Or, let&#39;s move on." tags="" position="800,859" size="100,100">Let&#39;s head west!
-
-Walk to (next stop) and click &#39;Ready&#39; when you&#39;re there.
-
-[[Ready!|Ready3]]
-
-</tw-passagedata><tw-passagedata pid="24" name="Ready3" tags="" position="801,1004" size="100,100">Currently you are at $Location.latitude and $Location.longitude.
-
-In a second, you&#39;ll arrive at your destination. 65.9 kilometres west of the Lake of Two Mountains is Calumet, Que.
-
-
-&lt;&lt;if approxEqual($Location.latitude, $stopblat) and approxEqual($Location.longitude, $stopblong)&gt;&gt;
-	&lt;&lt;display &quot;stopd&quot;&gt;&gt;
-	&lt;&lt;else&gt;&gt;
-	&lt;&lt;display &quot;error4&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="25" name="error4" tags="" position="800,1201" size="100,100">You&#39;re not in the right location. Move on anyways?
-
-[[Yes|stopd]]</tw-passagedata><tw-passagedata pid="26" name="stopd" tags="" position="803,1326" size="100,100">We&#39;ve left Ottawa beind, and now we&#39;re moving west up the Ottawa River to Portage du Fort area.
+[[Yes|stopd]]</tw-passagedata><tw-passagedata pid="23" name="stopd" tags="" position="2075,1186" size="100,100">We&#39;ve left Ottawa beind, and now we&#39;re moving west up the Ottawa River to Portage du Fort area.
 
 Just like each stop so far, we have steamboats all around us. Where to next?
 
@@ -457,70 +419,49 @@ Just like each stop so far, we have steamboats all around us. Where to next?
 [[Conservator4]]
 [[Curator4]]
 [[Community4]]
-[[Let&#39;s go to the next stop]]</tw-passagedata><tw-passagedata pid="27" name="Conservator4" tags="" position="803,1499" size="100,100">
+[[Let&#39;s go to the next stop]]</tw-passagedata><tw-passagedata pid="24" name="Conservator4" tags="" position="2083,1391" size="100,100">
 [[Curator4]]
 [[Community4]]
-[[Let&#39;s go to the next stop]]</tw-passagedata><tw-passagedata pid="28" name="Curator4" tags="" position="598,1503" size="100,100">
+[[Let&#39;s go to the next stop]]</tw-passagedata><tw-passagedata pid="25" name="Curator4" tags="" position="1878,1379" size="100,100">
 [[Conservator4]]
 [[Community4]]
-[[Let&#39;s go to the next stop]]</tw-passagedata><tw-passagedata pid="29" name="Let&#39;s go to the next stop" tags="" position="798,1659" size="100,100">Let&#39;s head west!
+[[Let&#39;s go to the next stop]]</tw-passagedata><tw-passagedata pid="26" name="Let&#39;s go to the next stop" tags="" position="2082,1571" size="100,100">Let&#39;s head to another stop. Click the link below to return to the artifact selection screen.
 
-Walk to (next stop) and click &#39;Ready&#39; when you&#39;re there.
+[[Let&#39;s choose another artifact.|Yes!]]
 
-[[Ready!|Ready4]]
-
-</tw-passagedata><tw-passagedata pid="30" name="Community4" tags="" position="1006,1503" size="100,100">
+</tw-passagedata><tw-passagedata pid="27" name="Community4" tags="" position="2270,1379" size="100,100">
 [[Conservator4]]
 [[Curator4]]
-[[Let&#39;s go to the next stop]]</tw-passagedata><tw-passagedata pid="31" name="stope" tags="" position="1299,348" size="100,100">We&#39;re near the far reaches of the Upper Ottawa River now. Can you feel it getting colder?
+[[Let&#39;s go to the next stop]]</tw-passagedata><tw-passagedata pid="28" name="stope" tags="" position="2667,1228" size="100,100">We&#39;re near the far reaches of the Upper Ottawa River now. Can you feel it getting colder?
 
 Where to first?
 
 [[Curator5]]
 [[Conservator5]]
 [[Community5]]
-[[Are we done yet?]]
+[[Let&#39;s keep on going.]]
 
-</tw-passagedata><tw-passagedata pid="32" name="Curator5" tags="" position="1099,495" size="100,100">[[Conservator5]]
+</tw-passagedata><tw-passagedata pid="29" name="Curator5" tags="" position="2467,1375" size="100,100">[[Conservator5]]
 [[Community5]]
-[[Are we done yet?]]</tw-passagedata><tw-passagedata pid="33" name="Conservator5" tags="" position="1303,500" size="100,100">[[Curator5]]
+[[Let&#39;s keep on going.]]</tw-passagedata><tw-passagedata pid="30" name="Conservator5" tags="" position="2671,1380" size="100,100">[[Curator5]]
 [[Community5]]
-[[Are we done yet?]]</tw-passagedata><tw-passagedata pid="34" name="Community5" tags="" position="1501,505" size="100,100">[[Curator5]]
+[[Let&#39;s keep on going.]]</tw-passagedata><tw-passagedata pid="31" name="Community5" tags="" position="2869,1385" size="100,100">[[Curator5]]
 [[Conservator5]]
-[[Are we done yet?]]</tw-passagedata><tw-passagedata pid="35" name="Are we done yet?" tags="" position="1299,704" size="100,100">[[Not quite]]
-</tw-passagedata><tw-passagedata pid="36" name="Ready4" tags="" position="799,1804" size="100,100">Currently you are at $Location.latitude and $Location.longitude.
+[[Let&#39;s keep on going.]]</tw-passagedata><tw-passagedata pid="32" name="Let&#39;s keep on going." tags="" position="2667,1584" size="100,100">Let&#39;s head to another stop. Click the link below to return to the artifact selection screen.
 
-In a second, you&#39;ll arrive at your destination. 65.9 kilometres west of the Lake of Two Mountains is Calumet, Que.
+[[Let&#39;s choose another artifact.|Yes!]]
 
+</tw-passagedata><tw-passagedata pid="33" name="error5" tags="" position="2668,1083" size="100,100">You&#39;re not in the right location. Move on anyways?
 
-&lt;&lt;if approxEqual($Location.latitude, $stopblat) and approxEqual($Location.longitude, $stopblong)&gt;&gt;
-	&lt;&lt;display &quot;stope&quot;&gt;&gt;
-	&lt;&lt;else&gt;&gt;
-	&lt;&lt;display &quot;error5&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="37" name="error5" tags="" position="1300,203" size="100,100">You&#39;re not in the right location. Move on anyways?
-
-[[Yes|stope]]</tw-passagedata><tw-passagedata pid="38" name="Not quite" tags="" position="1297,849" size="100,100">Walk to (next stop) and click &#39;Ready&#39; when you&#39;re there.
-
-[[Ready!|Ready5]]</tw-passagedata><tw-passagedata pid="39" name="Conservator3" tags="" position="802,695" size="100,100">[[Curator3]]
+[[Yes|stope]]</tw-passagedata><tw-passagedata pid="34" name="Conservator3" tags="" position="1482,1379" size="100,100">[[Curator3]]
 [[Community3]]
-[[Or, let&#39;s move on.]]</tw-passagedata><tw-passagedata pid="40" name="Community3" tags="" position="1002,700" size="100,100">[[Curator3]]
+[[Or, let&#39;s move on.]]</tw-passagedata><tw-passagedata pid="35" name="Community3" tags="" position="1678,1388" size="100,100">[[Curator3]]
 [[Conservator3]]
-[[Or, let&#39;s move on.]]</tw-passagedata><tw-passagedata pid="41" name="Curator3" tags="" position="599,702" size="100,100">[[Conservator3]]
+[[Or, let&#39;s move on.]]</tw-passagedata><tw-passagedata pid="36" name="Curator3" tags="" position="1287,1377" size="100,100">[[Conservator3]]
 [[Community3]]
-[[Or, let&#39;s move on.]]</tw-passagedata><tw-passagedata pid="42" name="Ready5" tags="" position="1297,999" size="100,100">Currently you are at $Location.latitude and $Location.longitude.
+[[Or, let&#39;s move on.]]</tw-passagedata><tw-passagedata pid="37" name="error6" tags="" position="2607,291" size="100,100">You&#39;re not in the right location. Move on anyways?
 
-In a second, you&#39;ll arrive at your destination. 65.9 kilometres west of the Lake of Two Mountains is Calumet, Que.
-
-
-&lt;&lt;if approxEqual($Location.latitude, $stopblat) and approxEqual($Location.longitude, $stopblong)&gt;&gt;
-	&lt;&lt;display &quot;stopf&quot;&gt;&gt;
-	&lt;&lt;else&gt;&gt;
-	&lt;&lt;display &quot;error6&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="43" name="error6" tags="" position="1299,1199" size="100,100">You&#39;re not in the right location. Move on anyways?
-
-[[Yes|stopf]]</tw-passagedata><tw-passagedata pid="44" name="stopf" tags="" position="1299,1349" size="100,100">We&#39;ve left Ottawa beind, and now we&#39;re moving west up the Ottawa River to Portage du Fort area.
+[[Yes|stopf]]</tw-passagedata><tw-passagedata pid="38" name="stopf" tags="" position="2607,441" size="100,100">We&#39;ve left Ottawa beind, and now we&#39;re moving west up the Ottawa River to Portage du Fort area.
 
 Just like each stop so far, we have steamboats all around us. Where to next?
 
@@ -528,66 +469,42 @@ Just like each stop so far, we have steamboats all around us. Where to next?
 [[Conservator6]]
 [[Curator6]]
 [[Community6]]
-[[Let&#39;s keep moving.]]</tw-passagedata><tw-passagedata pid="45" name="Conservator6" tags="" position="1149,1499" size="100,100">
+[[Let&#39;s keep moving.]]</tw-passagedata><tw-passagedata pid="39" name="Conservator6" tags="" position="2457,591" size="100,100">
 [[Curator6]]
 [[Community6]]
-[[Let&#39;s keep moving.]]</tw-passagedata><tw-passagedata pid="46" name="Curator6" tags="" position="1299,1499" size="100,100">[[Conservator6]]
+[[Let&#39;s keep moving.]]</tw-passagedata><tw-passagedata pid="40" name="Curator6" tags="" position="2607,591" size="100,100">[[Conservator6]]
 [[Community6]]
-[[Let&#39;s keep moving.]]</tw-passagedata><tw-passagedata pid="47" name="Community6" tags="" position="1449,1499" size="100,100">[[Conservator6]]
+[[Let&#39;s keep moving.]]</tw-passagedata><tw-passagedata pid="41" name="Community6" tags="" position="2757,591" size="100,100">[[Conservator6]]
 [[Curator6]]
-[[Let&#39;s keep moving.]]</tw-passagedata><tw-passagedata pid="48" name="Let&#39;s keep moving." tags="" position="1297,1707" size="100,100">Let&#39;s head west!
+[[Let&#39;s keep moving.]]</tw-passagedata><tw-passagedata pid="42" name="Let&#39;s keep moving." tags="" position="2605,799" size="100,100">Let&#39;s head to another stop. Click the link below to return to the artifact selection screen.
 
-Walk to (next stop) and click &#39;Ready&#39; when you&#39;re there.
+[[Let&#39;s choose another artifact.|Yes!]]
 
-[[Ready!|Ready6]]
+</tw-passagedata><tw-passagedata pid="43" name="error7" tags="" position="1984,300" size="100,100">You&#39;re not in the right location. Move on anyways?
 
-</tw-passagedata><tw-passagedata pid="49" name="Ready6" tags="" position="1297,1857" size="100,100">Currently you are at $Location.latitude and $Location.longitude.
-
-In a second, you&#39;ll arrive at your destination. 65.9 kilometres west of the Lake of Two Mountains is Calumet, Que.
-
-
-&lt;&lt;if approxEqual($Location.latitude, $stopblat) and approxEqual($Location.longitude, $stopblong)&gt;&gt;
-	&lt;&lt;display &quot;stopg&quot;&gt;&gt;
-	&lt;&lt;else&gt;&gt;
-	&lt;&lt;display &quot;error7&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="50" name="error7" tags="" position="1804,200" size="100,100">You&#39;re not in the right location. Move on anyways?
-
-[[Yes|stopg]]</tw-passagedata><tw-passagedata pid="51" name="stopg" tags="" position="1804,350" size="100,100">We&#39;re near the far reaches of the Upper Ottawa River now. Can you feel it getting colder?
+[[Yes|stopg]]</tw-passagedata><tw-passagedata pid="44" name="stopg" tags="" position="1984,430" size="100,100">We&#39;re near the far reaches of the Upper Ottawa River now. Can you feel it getting colder?
 
 Where to first?
 
 [[Curator7]]
 [[Conservator7]]
 [[Community7]]
-[[Let&#39;s go see the ----]]
+[[Let&#39;s go see another artifact.]]
 
-</tw-passagedata><tw-passagedata pid="52" name="Curator7" tags="" position="1671,502" size="100,100">
+</tw-passagedata><tw-passagedata pid="45" name="Curator7" tags="" position="1779,590" size="100,100">
 [[Conservator7]]
 [[Community7]]
-[[Let&#39;s go see the ----]]</tw-passagedata><tw-passagedata pid="53" name="Conservator7" tags="" position="1829,500" size="100,100">[[Curator7]]
+[[Let&#39;s go see another artifact.]]</tw-passagedata><tw-passagedata pid="46" name="Conservator7" tags="" position="1981,596" size="100,100">[[Curator7]]
 [[Community7]]
-[[Let&#39;s go see the ----]]</tw-passagedata><tw-passagedata pid="54" name="Community7" tags="" position="2001,504" size="100,100">[[Curator7]]
+[[Let&#39;s go see another artifact.]]</tw-passagedata><tw-passagedata pid="47" name="Community7" tags="" position="2181,588" size="100,100">[[Curator7]]
 [[Conservator7]]
-[[Let&#39;s go see the ----]]</tw-passagedata><tw-passagedata pid="55" name="Let&#39;s go see the ----" tags="" position="1796,700" size="100,100">Let&#39;s head west!
+[[Let&#39;s go see another artifact.]]</tw-passagedata><tw-passagedata pid="48" name="Let&#39;s go see another artifact." tags="" position="1976,788" size="100,100">Let&#39;s head to another stop. Click the link below to return to the artifact selection screen.
 
-Walk to (next stop) and click &#39;Ready&#39; when you&#39;re there.
+[[Let&#39;s choose another artifact.|Yes!]]
 
-[[Ready!|Ready7]]
+</tw-passagedata><tw-passagedata pid="49" name="error8" tags="" position="3302,263" size="100,100">You&#39;re not in the right location. Move on anyways?
 
-</tw-passagedata><tw-passagedata pid="56" name="Ready7" tags="" position="1796,850" size="100,100">Currently you are at $Location.latitude and $Location.longitude.
-
-In a second, you&#39;ll arrive at your destination. 65.9 kilometres west of the Lake of Two Mountains is Calumet, Que.
-
-
-&lt;&lt;if approxEqual($Location.latitude, $stopblat) and approxEqual($Location.longitude, $stopblong)&gt;&gt;
-	&lt;&lt;display &quot;stoph&quot;&gt;&gt;
-	&lt;&lt;else&gt;&gt;
-	&lt;&lt;display &quot;error8&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="57" name="error8" tags="" position="1806,1203" size="100,100">You&#39;re not in the right location. Move on anyways?
-
-[[Yes|stoph]]</tw-passagedata><tw-passagedata pid="58" name="stoph" tags="" position="1806,1353" size="100,100">We&#39;ve left Ottawa beind, and now we&#39;re moving west up the Ottawa River to Portage du Fort area.
+[[Yes|stoph]]</tw-passagedata><tw-passagedata pid="50" name="stoph" tags="" position="3302,413" size="100,100">We&#39;ve left Ottawa beind, and now we&#39;re moving west up the Ottawa River to Portage du Fort area.
 
 Just like each stop so far, we have steamboats all around us. Where to next?
 
@@ -595,15 +512,83 @@ Just like each stop so far, we have steamboats all around us. Where to next?
 [[Conservator8]]
 [[Curator8]]
 [[Community8]]
-[[The end?]]</tw-passagedata><tw-passagedata pid="59" name="Conservator8" tags="" position="1656,1503" size="100,100">
+[[The end?]]</tw-passagedata><tw-passagedata pid="51" name="Conservator8" tags="" position="3152,563" size="100,100">
 [[Curator8]]
 [[Community8]]
-[[The end?]]</tw-passagedata><tw-passagedata pid="60" name="Curator8" tags="" position="1806,1503" size="100,100">[[Conservator8]]
+[[The end?]]</tw-passagedata><tw-passagedata pid="52" name="Curator8" tags="" position="3302,563" size="100,100">[[Conservator8]]
 [[Community8]]
-[[The end?]]</tw-passagedata><tw-passagedata pid="61" name="Community8" tags="" position="1956,1503" size="100,100">[[Conservator8]]
+[[The end?]]</tw-passagedata><tw-passagedata pid="53" name="Community8" tags="" position="3452,563" size="100,100">[[Conservator8]]
 [[Curator8]]
-[[The end?]]</tw-passagedata><tw-passagedata pid="62" name="The end?" tags="" position="1802,1700" size="100,100">Thanks &amp; Credits &amp; More Info
+[[The end?]]</tw-passagedata><tw-passagedata pid="54" name="The end?" tags="" position="3298,760" size="100,100">Let&#39;s head to another stop. Click the link below to return to the artifact selection screen.
 
+[[Let&#39;s choose another artifact.|Yes!]]
+</tw-passagedata><tw-passagedata pid="55" name="Trolley car" tags="" position="100,656" size="100,100">Great choice! To see the trolley car, please to go aisle [bbb] and walk forwards [## feet] until you reach [this image].
+
+When you think you&#39;re there, click the &#39;Ready!&#39; text.
+
+[[Ready!|ReadyTrolley]]</tw-passagedata><tw-passagedata pid="56" name="Train car" tags="" position="255,647" size="100,100">Great choice! To see the train car, please to go aisle [bbb] and walk forwards [## feet] until you reach [this image].
+
+When you think you&#39;re there, click the &#39;Ready!&#39; text.
+
+[[Ready!|ReadyTrain]]</tw-passagedata><tw-passagedata pid="57" name="Powershovel" tags="" position="402,652" size="100,100">Great choice! To see the powershovel, please to go aisle [bbb] and walk forwards [## feet] until you reach [this image].
+
+When you think you&#39;re there, click the &#39;Ready!&#39; text.
+
+[[Ready!|ReadyPowershovel]]</tw-passagedata><tw-passagedata pid="58" name="Telescope" tags="" position="552,652" size="100,100">Great choice! To see the telescope, please to go aisle [bbb] and walk forwards [## feet] until you reach [this image].
+
+When you think you&#39;re there, click the &#39;Ready!&#39; text.
+
+[[Ready!|ReadyTelescope]]</tw-passagedata><tw-passagedata pid="59" name="Generator" tags="" position="704,651" size="100,100">Great choice! To see the generator, please to go aisle [bbb] and walk forwards [## feet] until you reach [this image].
+
+When you think you&#39;re there, click the &#39;Ready!&#39; text.
+
+[[Ready!|ReadyGenerator]]</tw-passagedata><tw-passagedata pid="60" name="Thresher" tags="" position="857,651" size="100,100">Great choice! To see the thresher, please to go aisle [bbb] and walk forwards [## feet] until you reach [this image].
+
+When you think you&#39;re there, click the &#39;Ready!&#39; text.
+
+[[Ready!|ReadyThresher]]</tw-passagedata><tw-passagedata pid="61" name="Pointer boat" tags="" position="1002,652" size="100,100">Great choice! To see the Pointer boat, please to go aisle [bbb] and walk forwards [## feet] until you reach [this image].
+
+When you think you&#39;re there, click the &#39;Ready!&#39; text.
+
+[[Ready!|ReadyBoat]]</tw-passagedata><tw-passagedata pid="62" name="Tree elevator" tags="" position="1148,649" size="100,100">Great choice! To see the tree elevator, please to go aisle [bbb] and walk forwards [## feet] until you reach [this image].
+
+When you think you&#39;re there, click the &#39;Ready!&#39; text.
+
+[[Ready!|ReadyElevator]]</tw-passagedata><tw-passagedata pid="63" name="ReadyTrolley" tags="" position="100,806" size="100,100">&lt;&lt;if approxEqual($Location.latitude, $stopalat) and approxEqual($Location.longitude, $stopalong)&gt;&gt;
+	&lt;&lt;display &quot;stopa&quot;&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+	&lt;&lt;display &quot;error1&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="ReadyTrain" tags="" position="255,797" size="100,100">&lt;&lt;if approxEqual($Location.latitude, $stopblat) and approxEqual($Location.longitude, $stopblong)&gt;&gt;
+	&lt;&lt;display &quot;stopb&quot;&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+	&lt;&lt;display &quot;error2&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="ReadyPowershovel" tags="" position="402,802" size="100,100">&lt;&lt;if approxEqual($Location.latitude, $stopclat) and approxEqual($Location.longitude, $stopclong)&gt;&gt;
+	&lt;&lt;display &quot;stopc&quot;&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+	&lt;&lt;display &quot;error3&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="ReadyTelescope" tags="" position="552,802" size="100,100">&lt;&lt;if approxEqual($Location.latitude, $stopdlat) and approxEqual($Location.longitude, $stopdlong)&gt;&gt;
+	&lt;&lt;display &quot;stopd&quot;&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+	&lt;&lt;display &quot;error4&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="ReadyGenerator" tags="" position="704,801" size="100,100">&lt;&lt;if approxEqual($Location.latitude, $stopelat) and approxEqual($Location.longitude, $stopelong)&gt;&gt;
+	&lt;&lt;display &quot;stope&quot;&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+	&lt;&lt;display &quot;error5&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="ReadyThresher" tags="" position="857,801" size="100,100">&lt;&lt;if approxEqual($Location.latitude, $stopflat) and approxEqual($Location.longitude, $stopflong)&gt;&gt;
+	&lt;&lt;display &quot;stopf&quot;&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+	&lt;&lt;display &quot;error6&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="ReadyBoat" tags="" position="1002,802" size="100,100">&lt;&lt;if approxEqual($Location.latitude, $stopglat) and approxEqual($Location.longitude, $stopglong)&gt;&gt;
+	&lt;&lt;display &quot;stopg&quot;&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+	&lt;&lt;display &quot;error7&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="ReadyElevator" tags="" position="1148,799" size="100,100">&lt;&lt;if approxEqual($Location.latitude, $stophlat) and approxEqual($Location.longitude, $stophlong)&gt;&gt;
+	&lt;&lt;display &quot;stoph&quot;&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+	&lt;&lt;display &quot;error8&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="Credit" tags="" position="101,398" size="100,100">Thanks for trying out the tour!
+
+&amp; Credits &amp; More Info
 
 Credit (Ingenium, Curators):
 Emily Gann, Curator of Transport?
@@ -614,80 +599,26 @@ William Knight, Curator, Agriculture and Food
 Credit (Ingenium, Conservators/Artifact Handlers):
 
 Credit (Community Members):
-</tw-passagedata><tw-passagedata pid="63" name="Shipwrecks styleshhet" tags="" position="681,352" size="100,100">* { box-sizing: border-box;
-}
 
-body{
-background-image: url(&quot;https://user-images.githubusercontent.com/65786405/142088958-119258ba-da7f-4719-a1dc-a7c23b38f09f.jpg&quot;);
-background-size: cover;
-}
+Credit (Code):
+Dr. Shawn Graham, Carleton University
 
-.passage {
-color: black;  
-font-size: large;
-  font-family: Arial, Helvetica, sans-serif;
-border-style: solid;  
-border-width: 0px;  
-border-color: white;  
-background: rgba(255, 255, 255, 0.5);
-padding-top: 20px;
-padding-bottom: 20px;
-padding-left: 35px;
-padding-right: 35px;
-border-radius: 10px
-}
+Credit (Sounds):
+</tw-passagedata><tw-passagedata pid="72" name="Audio Test - Embed" tags="" position="782,39" size="100,100">[[Youtube]]
 
-h2 {color: black; text-align: center;}
-h1 {color: white; text-align: center;}
+[[Soundcloud]]
 
-h4 {color: black; text-align: center; background-color: white; border: 2px solid white; border-radius: 10px;
-margin-top: 15px;
-margin-bottom: 15px;
-margin-right: 300px;
-margin-left: 300px;
-}
+[[Google Drive]]
 
-h5 {color: black; text-align: center; background-color: white; border: 2px solid white; border-radius: 10px;
-margin-top: 15px;
-margin-bottom: 15px;
-margin-right: 100px;
-margin-left: 100px;
-}
-
-h6 {color: white; text-align: center;}
-
-h3 {color: teal; text-align: center; background-color: teal; border: 2px solid teal; border-radius: 10px;
-margin-top: 15px;
-margin-bottom: 15px;
-margin-right: 100px;
-margin-left: 100px;
-}
-
-
-.passage a {color: blue;}
-
-.passage a:hover {color: darkblue;}
-
-img { 
-max-width: 100%;
-height: auto;
-display: block;
-margin-left: auto;
-margin-right: auto;
-}
-
-video {
-  width: 100%;
-  height: auto;
-}
-
-
-#ui-bar {
-background: rgba(0, 0, 0, 0.5);
-border-right: 1px solid #444;
-text-align: center;
-color: black;
-}</tw-passagedata></tw-storydata>
+[[File Embed]]</tw-passagedata><tw-passagedata pid="73" name="Youtube" tags="" position="860,203" size="100,100">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/liO8KN51KM4&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="74" name="Soundcloud" tags="" position="1159,87" size="100,100">&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; allow=&quot;autoplay&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1174347322&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true&quot;&gt;&lt;/iframe&gt;&lt;div style=&quot;font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;&quot;&gt;&lt;a href=&quot;https://soundcloud.com/jaime-simons-780288205&quot; title=&quot;Jaime Simons&quot; target=&quot;_blank&quot; style=&quot;color: #cccccc; text-decoration: none;&quot;&gt;Jaime Simons&lt;/a&gt; · &lt;a href=&quot;https://soundcloud.com/jaime-simons-780288205/rrfoster&quot; title=&quot;RRFoster&quot; target=&quot;_blank&quot; style=&quot;color: #cccccc; text-decoration: none;&quot;&gt;RRFoster&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="75" name="Google Drive" tags="" position="1058,195" size="100,100">&lt;iframe src=&quot;https://drive.google.com/file/d/1n9lKOJqZNLTF_E4uA33_QWXVNx1RAGp_/preview&quot; width=&quot;400&quot; height=&quot;50&quot;&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="76" name="File Embed" tags="" position="975,14" size="100,100">&lt;figure&gt;
+    &lt;figcaption&gt;Listen to the T-Rex:&lt;/figcaption&gt;
+    &lt;audio
+        controls
+        src=&quot;/audio/RRFoster.m4a&quot;&gt;
+            Your browser does not support the
+            &lt;code&gt;audio&lt;/code&gt; element.
+    &lt;/audio&gt;
+&lt;/figure&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},errorPrologRegExp=/^(?:(?:uncaught\s+(?:exception:\s+)?)?\w*(?:error|exception|_err):\s+)+/i,Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(errorPrologRegExp,"")+".":": unknown error."),"object"===(void 0===n?"undefined":_typeof(n))&&null!==n&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}(),Patterns=function(){var e=function(){var e=new Map([[" ","\\u0020"],["\f","\\f"],["\n","\\n"],["\r","\\r"],["\t","\\t"],["\v","\\v"],[" ","\\u00a0"],[" ","\\u1680"],["᠎","\\u180e"],[" ","\\u2000"],[" ","\\u2001"],[" ","\\u2002"],[" ","\\u2003"],[" ","\\u2004"],[" ","\\u2005"],[" ","\\u2006"],[" ","\\u2007"],[" ","\\u2008"],[" ","\\u2009"],[" ","\\u200a"],["\u2028","\\u2028"],["\u2029","\\u2029"],[" ","\\u202f"],[" ","\\u205f"],["　","\\u3000"],["\ufeff","\\ufeff"]]),t=/^\s$/,r="";return e.forEach(function(e,n){t.test(n)||(r+=e)}),r?"[\\s"+r+"]":"\\s"}(),t="[\\u0020\\f\\t\\v\\u00a0\\u1680\\u180e\\u2000-\\u200a\\u202f\\u205f\\u3000\\ufeff]",r="\\s"===e?"\\S":e.replace(/^\[/,"[^"),n="[0-9A-Z_a-z\\-\\u00c0-\\u00d6\\u00d8-\\u00f6\\u00f8-\\u00ff\\u0150\\u0170\\u0151\\u0171]",a=n.replace("\\-",""),i=function(){var e="(?:[\\x2D.0-9A-Z_a-z\\xB7\\xC0-\\xD6\\xD8-\\xF6\\xF8-\\u037D\\u037F-\\u1FFF\\u200C\\u200D\\u203F\\u2040\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD]|[\\uD800-\\uDB7F][\\uDC00-\\uDFFF])";return"[A-Za-z](?:"+e+"*-"+e+"*|[0-9A-Za-z]*)"}(),o=function(){return"("+n+"+)\\(([^\\)\\|\\n]+)\\):|"+t+"*("+n+"+)"+t+"*:([^;\\|\\n]+);|"+t+"*((?:[#.]"+n+"+"+t+"*)+);"}();return Object.freeze({space:e,spaceNoTerminator:t,lineTerminator:"[\\n\\r\\u2028\\u2029]",notSpace:r,anyChar:"(?:.|[\\n\\r\\u2028\\u2029])",anyLetter:n,anyLetterStrict:a,identifierFirstChar:"[$A-Z_a-z]",identifierNextChar:"[$0-9A-Z_a-z]",identifier:"[$A-Z_a-z][$0-9A-Z_a-z]*",variableSigil:"[$_]",variable:"[$_][$A-Z_a-z][$0-9A-Z_a-z]*",macroName:"[A-Za-z][\\w-]*|[=-]",templateName:"[A-Za-z][\\w-]*",htmlTagName:i,cssIdOrClassSigil:"[#.]",cssImage:"\\[[<>]?[Ii][Mm][Gg]\\[(?:\\s|\\S)*?\\]\\]+",inlineCss:o,url:"(?:file|https?|mailto|ftp|javascript|irc|news|data):[^\\s'\"]+"})}();!function(){function e(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n=void 0===t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var t=function(){function e(e,n){var a=String(e);if(!a)return a;switch(n){case"start":return t.test(a)?a.replace(t,""):a;case"end":return r.test(a)?a.replace(r,""):a;default:throw new Error('_trimString called with incorrect where parameter value: "'+n+'"')}}var t=new RegExp("^"+Patterns.space+Patterns.space+"*"),r=new RegExp(""+Patterns.space+Patterns.space+"*$");return e}();Array.prototype.flat||Object.defineProperty(Array.prototype,"flat",{configurable:!0,writable:!0,value:function(){function e(){if(null==this)throw new TypeError("Array.prototype.flat called on null or undefined");var t=0===arguments.length?1:Number(arguments[0])||0;return t<1?Array.prototype.slice.call(this):Array.prototype.reduce.call(this,function(r,n){return n instanceof Array?r.push.apply(r,_toConsumableArray(e.call(n,t-1))):r.push(n),r},[])}return e}()}),Array.prototype.flatMap||Object.defineProperty(Array.prototype,"flatMap",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatMap called on null or undefined");return Array.prototype.map.apply(this,arguments).flat()}}),Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(n===t||n!==n&&t!==t)return!0}return!1}}),Object.entries||Object.defineProperty(Object,"entries",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.entries object parameter must be an object");return Object.keys(e).map(function(t){return[t,e[t]]})}}),Object.fromEntries||Object.defineProperty(Object,"fromEntries",{configurable:!0,writable:!0,value:function(e){return Array.from(e).reduce(function(e,t){if(Object(t)!==t)throw new TypeError("Object.fromEntries iterable parameter must yield objects");return t[0]in e?Object.defineProperty(e,t[0],{configurable:!0,enumerable:!0,writable:!0,value:t[1]}):e[t[0]]=t[1],e},{})}}),Object.getOwnPropertyDescriptors||Object.defineProperty(Object,"getOwnPropertyDescriptors",{configurable:!0,writable:!0,value:function(e){if(null==e)throw new TypeError("Object.getOwnPropertyDescriptors object parameter is null or undefined");var t=Object(e);return Reflect.ownKeys(t).reduce(function(e,r){var n=Object.getOwnPropertyDescriptor(t,r);return void 0!==n&&(r in e?Object.defineProperty(e,r,{configurable:!0,enumerable:!0,writable:!0,value:n}):e[r]=n),e},{})}}),Object.values||Object.defineProperty(Object,"values",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.values object parameter must be an object");return Object.keys(e).map(function(t){return e[t]})}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:e(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:n+e(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return t(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return t(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return t(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return t(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,n=void 0;switch(t.length){case 1:r=0,n=e-1;break;case 2:r=0,n=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),n=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r)<0&&(r=0),Number.isNaN(n)?n=0:!Number.isFinite(n)||n>=e?n=e-1:n<0&&(n=e+n)<0&&(n=e-1),_random(r,n)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){return e[0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1))]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var e=Array.from(this);if(0===arguments.length)return e;var t=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),r=t.length;if(0===r)return e;for(var n=Array.prototype.indexOf,a=Array.prototype.push,i=0;i<r;++i){var o=t[i];-1===n.call(e,o)&&a.call(e,o)}return e}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;-1!==(r=e.call(this,t,r));)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.concat.apply([],arguments),r=t.length,n=[],a=0;a<e;++a)for(var i=this[a],o=0;o<r;++o){var s=t[o];if(i===s||i!==i&&s!==s){n.push(a);break}}for(var u=[],l=0,c=n.length;l<c;++l)u[l]=this[n[l]];for(var d=Array.prototype.splice,f=n.length-1;f>=0;--f)d.call(this,n[f],1);return u}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"deleteWith",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.deleteWith called on null or undefined");if("function"!=typeof e)throw new Error("Array.prototype.deleteWith predicate parameter must be a function");var r=this.length>>>0;if(0===r)return[];for(var n=Array.prototype.splice,a=[],i=[],o=0;o<r;++o)e.call(t,this[o],o,this)&&(i.push(this[o]),a.push(o));for(var s=a.length-1;s>=0;--s)n.call(this,a[s],1);return i}}),Object.defineProperty(Array.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.first called on null or undefined");if(0!=this.length>>>0)return this[0]}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.last called on null or undefined");var e=this.length>>>0;if(0!==e)return this[e-1]}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=Array.prototype.splice,a=[],i=t-1;do{a.push(n.call(this,_random(0,i--),1)[0])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){return this[0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)))]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=new Map,a=[],i=t-1;do{var o=void 0;do{o=_random(0,i)}while(n.has(o));n.set(o,!0),a.push(this[o])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var n=this[t];this[t]=this[r],this[r]=n}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.unshift,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function(e,t,r){var n=Number(e);return Number.isNaN(n)?NaN:n.clamp(t,r)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch(void 0===i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return-1!==String.prototype.indexOf.apply(this,arguments)}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;-1!==(n=t.call(this,e,n));)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.first called on null or undefined");return _getCodePointStartAndEnd(String(this),0).char}}),Object.defineProperty(String.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.last called on null or undefined");var e=String(this);return _getCodePointStartAndEnd(e,e.length-1).char}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n)<0&&(a=0):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return void 0!==r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_stringify",{value:JSON.stringify}),Object.defineProperty(JSON,"stringify",{configurable:!0,writable:!0,value:function(e,t,r){return JSON._real_stringify(e,function(e,r){var n=r;if("function"==typeof t)try{n=t(e,n)}catch(e){}return void 0===n&&(n=["(revive:eval)","undefined"]),n},r)}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.flat.call(this,1/0)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Opera:!t&&("object"===_typeof(window.operamini)||e.includes("opera mini")),Windows:t||/iemobile|wpdesktop/.test(e),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Opera||r.Windows}}),n=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),a=!e.includes("opera")&&/msie|trident/.test(e),i=a?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null,u=e.includes("vivaldi");return Object.freeze({userAgent:e,isMobile:r,isGecko:n,isIE:a,ieVersion:i,isOpera:o,operaVersion:s,isVivaldi:u})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),r=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),n=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),a=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}(),i=function(){try{return"ontouchstart"in window||!!window.DocumentTouch&&document instanceof window.DocumentTouch||!!navigator.maxTouchPoints||!!navigator.msMaxTouchPoints}catch(e){}return!1}(),o=function(){try{for(var e=new Map([["transition","transitionend"],["MSTransition","msTransitionEnd"],["WebkitTransition","webkitTransitionEnd"],["MozTransition","transitionend"]]),t=[].concat(_toConsumableArray(e.keys())),r=document.createElement("div"),n=0;n<t.length;++n)if(r.style[t[n]]!==undefined)return e.get(t[n])}catch(e){}return!1}();return Object.freeze({audio:e,fileAPI:t,geolocation:r,mutationObserver:n,performance:a,touch:i,transitionEndEvent:o})}(),Visibility=function(){function e(){return a}function t(){return a&&document[a.stateProperty]||"visible"}function r(){return Boolean(a)}function n(){return Boolean(a&&document[a.hiddenProperty])}var a=function(){try{return Object.freeze([{hiddenProperty:"hidden",stateProperty:"visibilityState",changeEvent:"visibilitychange"},{hiddenProperty:"webkitHidden",stateProperty:"webkitVisibilityState",changeEvent:"webkitvisibilitychange"},{hiddenProperty:"mozHidden",stateProperty:"mozVisibilityState",changeEvent:"mozvisibilitychange"},{hiddenProperty:"msHidden",stateProperty:"msVisibilityState",changeEvent:"msvisibilitychange"}].find(function(e){return e.hiddenProperty in document}))}catch(e){}return undefined}();return Object.freeze(Object.defineProperties({},{vendor:{get:e},state:{get:t},isEnabled:{value:r},isHidden:{value:n},hiddenProperty:{value:a&&a.hiddenProperty},stateProperty:{value:a&&a.stateProperty},changeEvent:{value:a&&a.changeEvent}}))}(),Fullscreen=function(){function e(e){var t=e||document.documentElement;return t===document.documentElement&&("msRequestFullscreen"===f.requestFn||Browser.isOpera&&Browser.operaVersion<15)&&(t=document.body),t}function t(){return f}function r(){return(f||null)&&document[f.element]}function n(){return Boolean(f&&document[f.isEnabled])}function a(){return Boolean(f&&document[f.element])}function i(t,r){var n=this;if(!f)return Promise.reject(new Error("fullscreen not supported"));var i=e(r);if("function"!=typeof i[f.requestFn])return Promise.reject(new Error("fullscreen not supported"));if(a())return Promise.resolve();if(p())return i[f.requestFn](t);var o=".Fullscreen_requestFullscreen";return new Promise(function(e,r){jQuery(i).off(o).one(""+f.errorEvent+o+" "+f.changeEvent+o,function(t){jQuery(n).off(o),t.type===f.errorEvent?r(new Error("unknown fullscreen request error")):e()}),i[f.requestFn](t)})}function o(){var e=this;if(!f||"function"!=typeof document[f.exitFn])return Promise.reject(new TypeError("fullscreen not supported"));if(!a())return Promise.reject(new TypeError("fullscreen mode not active"));if(p())return document[f.exitFn]();var t=".Fullscreen_exitFullscreen";return new Promise(function(r,n){jQuery(document).off(t).one(""+f.errorEvent+t+" "+f.changeEvent+t,function(a){jQuery(e).off(t),a.type===f.errorEvent?n(new Error("unknown fullscreen exit error")):r()}),document[f.exitFn]()})}function s(e,t){return a()?o():i(e,t)}function u(t,r){if(f){var n=e(r);$(n).on(f.changeEvent,t)}}function l(t,r){if(f){var n=e(r);t?$(n).off(f.changeEvent,t):$(n).off(f.changeEvent)}}function c(t,r){if(f){var n=e(r);$(n).on(f.errorEvent,t)}}function d(t,r){if(f){var n=e(r);t?$(n).off(f.errorEvent,t):$(n).off(f.errorEvent)}}var f=function(){try{return Object.freeze([{isEnabled:"fullscreenEnabled",element:"fullscreenElement",requestFn:"requestFullscreen",exitFn:"exitFullscreen",changeEvent:"fullscreenchange",errorEvent:"fullscreenerror"},{isEnabled:"webkitFullscreenEnabled",element:"webkitFullscreenElement",requestFn:"webkitRequestFullscreen",exitFn:"webkitExitFullscreen",changeEvent:"webkitfullscreenchange",errorEvent:"webkitfullscreenerror"},{isEnabled:"mozFullScreenEnabled",element:"mozFullScreenElement",requestFn:"mozRequestFullScreen",exitFn:"mozCancelFullScreen",changeEvent:"mozfullscreenchange",errorEvent:"mozfullscreenerror"},{isEnabled:"msFullscreenEnabled",element:"msFullscreenElement",requestFn:"msRequestFullscreen",exitFn:"msExitFullscreen",changeEvent:"MSFullscreenChange",errorEvent:"MSFullscreenError"}].find(function(e){return e.isEnabled in document}))}catch(e){}return undefined}(),p=function(){function e(){if(null!==t)return t;if(t=!1,f)try{var e=document.exitFullscreen();e.catch(function(){}),t=e instanceof Promise}catch(e){}return t}var t=null;return e}();return Object.freeze(Object.defineProperties({},{vendor:{get:t},element:{get:r},isEnabled:{value:n},isFullscreen:{value:a},request:{value:i},exit:{value:o},toggle:{value:s},onChange:{value:u},offChange:{value:l},onError:{value:c},offError:{value:d}}))}(),_ref3=function(){function e(e){for(var t=e.cloneNode(!0),r=document.createDocumentFragment(),n=void 0;null!==(n=t.firstChild);){if(n.nodeType===Node.ELEMENT_NODE)switch(n.nodeName.toUpperCase()){case"BR":case"DIV":case"P":r.appendChild(document.createTextNode(" "))}r.appendChild(n)}return r.textContent}function t(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)return e;if(e instanceof String)return String(e);if(e instanceof Number)return Number(e);if(e instanceof Boolean)return Boolean(e)

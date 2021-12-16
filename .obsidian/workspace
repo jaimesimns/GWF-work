@@ -1,15 +1,15 @@
 {
   "main": {
-    "id": "f4158fc2f540c8a8",
+    "id": "97c22cdba6906332",
     "type": "split",
     "children": [
       {
-        "id": "48020dca2bd8680d",
+        "id": "54cae8da57451f4f",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Process Notes/11-24-2021.md",
+            "file": "make the topic.md",
             "mode": "source"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 308
   },
   "right": {
     "id": "37a675bda90b82c6",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Process Notes/11-24-2021.md",
+                "file": "make the topic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "48020dca2bd8680d",
+  "active": "54cae8da57451f4f",
   "lastOpenFiles": [
-    "Process Notes/11-24-2021.md",
-    "artifact notes/To do - MRE whoops.md",
+    "make the topic.md",
+    "Meeting with Emily.md",
     "To Do + Timeline.md",
-    "start-pause-stop buttons in Twine.md",
-    "stop-start sound on Twine.md",
-    "general notes.md",
-    "Media/Collection Map/Ingenium-Collection.png",
-    "Media/Twine/Publishing to Itch.io.md",
-    "artifact notes/tree elevator.md",
-    "artifact notes/Thresher.md"
+    "artifact notes/Pointer Boat/pointer boat.md",
+    "artifact notes/Pointer Boat/pointer boat - catalogue info.md",
+    "artifact notes/Tree elevator/tree elevator external research.md",
+    "to read on artificial soundscapes.md",
+    "Media/Images/Pasted image 20211213211824.png",
+    "artifact notes/Trolley car/bus soundscape ideas.md",
+    "artifact notes/Tree elevator/tree elevator.md"
   ]
 }
