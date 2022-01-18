@@ -1,7 +1,9 @@
-Michel
+1974.0488???
 
 Dominion observatory, still stands
 
+*Michel*
+- bilingual
 
 - opening ceiling
 - helen sawyer-hogg connection

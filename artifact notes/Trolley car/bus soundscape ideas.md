@@ -1,5 +1,33 @@
+==Plan:==
+
+in order:
+3 min soundscape?
+
+- trolleybus sounds
+- people talking (make quieter though)
+
+church st edouard
+theatre plaza - lots of people outside plus a movie voice? "Son seul amour/One desire" 1955 film (youtube trailer in english only)
+fire station 1950s https://www.youtube.com/watch?v=RQqsAzaPKtA
+church st ambroise https://freesound.org/people/InspectorJ/sounds/417147/ "Cathedral Bells, Close, A.wav" by InspectorJ ([www.jshaw.co.uk](http://www.jshaw.co.uk/)) of [Freesound.org](http://freesound.org/)
+apt buildings
+park
+apt
+park 
 
 
+
+
+
+
+
+
+
+
+
+
+
+---
 https://www.soundsnap.com/tags/trolley_bus
 - three different sounds of the bus moving
 
@@ -44,5 +72,8 @@ Resources for Rue Beaubien, Montreal
 - https://histograd.com/old_map.php?map=425
 - https://histograd.com/list.php?street=%22Beaubien%20O%22
 
+Montreal history by date
+https://imtl.org/montreal/histoire.php?periode=1950
 
-
+An image of the time period
+https://www.journaldemontreal.com/2015/04/25/la-rue-beaubien-est-a-lintersection-saint-denis
