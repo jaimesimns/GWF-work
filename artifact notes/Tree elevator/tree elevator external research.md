@@ -1,3 +1,9 @@
+"Little Giant elevator" https://usfarmer.com/grain-handling-and-storage-equipment/little-giant-augers-elevators-conveyors-59353.aspx
+
+
+
+
+
 Lunenburg County is considered the "Balsam Fir Christmas Tree Capital of the World".
 - https://www.novascotia.com/trip-ideas/stories/nova-scotias-unique-christmas-tree-traditions
 

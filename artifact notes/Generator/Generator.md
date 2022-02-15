@@ -7,6 +7,7 @@ OH 0980
 
 photo from when it was exhibited; was also likely in use
 
-![[Pasted image 20211214122303.png]]
+[[Pasted image 20211214122303.png]]
 
-![[Pasted image 20211214122944.png]]
+[[Pasted image 20211214122944.png]]
+

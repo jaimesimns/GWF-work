@@ -1,5 +1,7 @@
 1974.0488???
 
+**Michel suggested perhaps working with Wanda Diaz Merced, a blind astronmer who used sonification to hear the starts**
+
 Dominion observatory, still stands
 
 *Michel*
@@ -10,6 +12,7 @@ Dominion observatory, still stands
 - 003.a
 - gears inside?
 
+https://ingeniumcanada.org/channel/boards/collection-profile-the-dominion-observatory
 
 image of telescope base in use!!
 - https://www.flickr.com/photos/chocolatedisco/2696925400

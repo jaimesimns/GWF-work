@@ -8,6 +8,7 @@ Used by: Haley Industries in Renfrew, Ontario
 Function: excavation
 
 Supp. info in file no. 6411-163/6394-125 ("Type B-3 Steam Shovel, Dragline, Lifting Crane, Clamshel, Railroad Ditcher, Bucyrus-Erie Co.")
+library@ingeniumcanada.org
 
 Received via Tax Receipt from Dr. W. D. Burwell, 1984-09-05
 

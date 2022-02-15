@@ -1,13 +1,18 @@
 Re-try in Ke EMu
 - [ ] try to search 'bale elevator' in Ke EMu (instead of tree elevator)
 - [ ] generator
+- [ ] telescope
 
 To do
-- [ ] create a demo of the rail car
+- [ ] mmmmm
 
 Later
 - [ ] test publishing options for final product
-- [ ] test sound accessibility (email Sam)
+- [ ] test sound accessibility
+- [ ] audio transcripts and descriptions of the soundscapes
+- [ ] Q&A with Tom
+- [ ] Channel post at end of the project
+- [ ] Figure out/start storing assets
 
 
 
