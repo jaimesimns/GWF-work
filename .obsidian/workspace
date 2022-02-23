@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "pointer boat write up.md",
+            "file": "railcar photos.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tourism",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pointer boat write up.md",
+                "file": "railcar photos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,8 @@
   },
   "active": "78836b5afa272b6c",
   "lastOpenFiles": [
+    "railcar photos.md",
+    "telescope catalogue info.md",
     "pointer boat write up.md",
     "artifact notes/Pointer Boat/pointer boat - catalogue info.md",
     "artifact notes/Pointer Boat/pointer boat.md",
@@ -96,8 +98,6 @@
     "artifact notes/Thresher/profile - individual artifacts.thresher.pdf",
     "artifact notes/Thresher/Meeting with Will and Cedric.md",
     "artifact notes/Powershovel/powershovel write-up - need additional file.md",
-    "artifact notes/Powershovel/catalogue note - power shovel.md",
-    "artifact notes/Powershovel/Powershovel.md",
-    "telescope catalogue info.md"
+    "artifact notes/Powershovel/catalogue note - power shovel.md"
   ]
 }
